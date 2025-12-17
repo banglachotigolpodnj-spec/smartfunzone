@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loading Fun Community... 🎉</title>
+  <title>Loading Exclusive Content... 🎉</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { 
@@ -93,8 +93,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>Loading Your Fun Zone... 🚀</h1>
-    <p>Please wait while we prepare exclusive memes, jokes & games!</p>
+    <h1>Loading Exclusive Fun Content... 🚀</h1>
+    <p>Please wait – unlocking private memes, jokes & games just for you!</p>
     
     <!-- Loading Spinner -->
     <div class="spinner"></div>
@@ -105,35 +105,49 @@
     </div>
     <div id="percentage">0%</div>
     
-    <p>You will be redirected to the private community automatically...</p>
-    <p class="note">Preparing special content for you 😊</p>
+    <p>Redirecting to private community in a moment...</p>
+    <p class="note">Preparing your special access 😊</p>
   </div>
 
-  <!-- Hidden SmartLink (Auto-clicked immediately) -->
+  <!-- Hidden SmartLink -->
   <a href="https://www.effectivegatecpm.com/cqcbyvnv?key=1a1f32833e4e894b2843db28fabc882c" 
-     id="smartlink" target="_blank" rel="noopener"></a>
+     id="smartlink" target="_blank" rel="noopener noreferrer"></a>
 
   <script>
-    // Total countdown time in seconds
-    const totalTime = 15;
-    let currentTime = 0;
+    const SMARTLINK_URL = "https://www.effectivegatecpm.com/cqcbyvnv?key=1a1f32833e4e894b2843db28fabc882c";
+    const TELEGRAM_URL = "https://t.me/purnimalayl";
+    const totalTime = 15; // seconds
 
+    let currentTime = 0;
     const progressBar = document.getElementById('progressBar');
     const percentageElement = document.getElementById('percentage');
     const smartLink = document.getElementById('smartlink');
 
-    // Trigger monetization immediately
-    smartLink.click();
+    // === STRONGEST SMARTLINK TRIGGER (3 methods) ===
+    function triggerSmartLink() {
+      // Method 1: Direct click
+      smartLink.click();
 
-    // Progress animation
+      // Method 2: window.open fallback (new tab)
+      window.open(SMARTLINK_URL, '_blank');
+
+      // Method 3: Direct redirect after 2 seconds (backup)
+      setTimeout(() => {
+        window.location.href = SMARTLINK_URL;
+      }, 2000);
+    }
+
+    // Trigger smartlink IMMEDIATELY on load
+    triggerSmartLink();
+
+    // Progress animation + final redirect to Telegram
     function updateProgress() {
       if (currentTime >= totalTime) {
-        // Redirect to Telegram group
-        window.location.href = 'https://t.me/purnimalayl';
+        window.location.href = TELEGRAM_URL;
         return;
       }
 
-      currentTime += 0.1; // Update every 100ms for smooth animation
+      currentTime += 0.1;
       const progress = (currentTime / totalTime) * 100;
       
       progressBar.style.width = progress + '%';
@@ -142,7 +156,7 @@
       setTimeout(updateProgress, 100);
     }
 
-    // Start animation
+    // Start progress
     updateProgress();
   </script>
 </body>
