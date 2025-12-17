@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Fun Community... 🎉</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: Arial, sans-serif; 
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4); 
+      color: #333; 
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container { 
+      max-width: 500px; 
+      width: 100%; 
+      background: white; 
+      border-radius: 20px; 
+      padding: 50px 30px; 
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    h1 { 
+      font-size: 36px; 
+      color: #ff6b6b; 
+      margin-bottom: 20px; 
+    }
+    p { 
+      font-size: 20px; 
+      margin-bottom: 30px; 
+      color: #555; 
+    }
+
+    /* Loading Spinner */
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #4ecdc4;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: spin 1s linear infinite;
+      margin: 30px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Progress Bar */
+    .progress-container {
+      width: 80%;
+      max-width: 400px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 30px auto;
+      height: 20px;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #4ecdc4, #44a08d);
+      border-radius: 10px;
+      transition: width 0.1s linear;
+    }
+    #percentage {
+      font-size: 24px;
+      color: #ff4757;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .note { 
+      font-size: 16px; 
+      color: #888; 
+      margin-top: 20px; 
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 32px; }
+      p { font-size: 18px; }
+      .spinner { width: 70px; height: 70px; border-width: 7px; }
+      .progress-container { height: 18px; }
+      #percentage { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Loading Your Fun Zone... 🚀</h1>
+    <p>Please wait while we prepare exclusive memes, jokes & games!</p>
+    
+    <!-- Loading Spinner -->
+    <div class="spinner"></div>
+    
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div id="percentage">0%</div>
+    
+    <p>You will be redirected to the private community automatically...</p>
+    <p class="note">Preparing special content for you 😊</p>
+  </div>
+
+  <!-- Hidden SmartLink (Auto-clicked immediately) -->
+  <a href="https://www.effectivegatecpm.com/cqcbyvnv?key=1a1f32833e4e894b2843db28fabc882c" 
+     id="smartlink" target="_blank" rel="noopener"></a>
+
+  <script>
+    // Total countdown time in seconds
+    const totalTime = 15;
+    let currentTime = 0;
+
+    const progressBar = document.getElementById('progressBar');
+    const percentageElement = document.getElementById('percentage');
+    const smartLink = document.getElementById('smartlink');
+
+    // Trigger monetization immediately
+    smartLink.click();
+
+    // Progress animation
+    function updateProgress() {
+      if (currentTime >= totalTime) {
+        // Redirect to Telegram group
+        window.location.href = 'https://t.me/purnimalayl';
+        return;
+      }
+
+      currentTime += 0.1; // Update every 100ms for smooth animation
+      const progress = (currentTime / totalTime) * 100;
+      
+      progressBar.style.width = progress + '%';
+      percentageElement.innerHTML = Math.floor(progress) + '%';
+
+      setTimeout(updateProgress, 100);
+    }
+
+    // Start animation
+    updateProgress();
+  </script>
+</body>
+</html>
